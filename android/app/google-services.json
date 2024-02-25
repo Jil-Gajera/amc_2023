@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "961195881174",
+    "project_id": "amc2024-6ed49",
+    "storage_bucket": "amc2024-6ed49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:961195881174:android:4f5af8edc4859fa7294f77",
+        "android_client_info": {
+          "package_name": "com.example.amc_2023"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdTlkP6hDkrzimyQyFe5tFT1tcnUNt8dk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

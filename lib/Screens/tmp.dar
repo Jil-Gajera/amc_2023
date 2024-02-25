@@ -1,0 +1,28 @@
+ final List<BankInfo> bankInfoList = [
+    BankInfo('Allahabad Bank', 'asset/images/allahabad.png'),
+    BankInfo('Axis Bank', 'asset/images/axis.png'),
+    BankInfo('Bandhan Bank', 'asset/images/bandhanbank.png'),
+    BankInfo('Bank of Baroda', 'asset/images/bob.png'),
+    BankInfo('Canara Bank', 'asset/images/canara.png'),
+    BankInfo('Centrall Bank', 'asset/images/centralbank.png'),
+    BankInfo('citi Bank', 'asset/images/citibank.png'),
+    BankInfo('dbs Bank', 'asset/images/dbs.png'),
+    BankInfo('Hdfc Bank', 'asset/images/hdfc.png'),
+    BankInfo('ICICI Bank', 'asset/images/icici.png'),
+    BankInfo('IDBI Bank', 'asset/images/idbi.png'),
+    BankInfo('IDFC First Bank', 'asset/images/idfc.png'),
+    BankInfo('Indian Bank', 'asset/images/indian.png'),
+    BankInfo('Indusind Bank', 'asset/images/indusind.png'),
+    BankInfo('Kotak Bank', 'asset/images/kotak.png'),
+    BankInfo('Punjab National Bank', 'asset/images/pnb.png'),
+    BankInfo('Rbl Bank', 'asset/images/rbl.png'),
+    BankInfo('Sbi Bank', 'asset/images/sbi.png'),
+    BankInfo('Syndicate Bank', 'asset/images/syndicate.png'),
+    BankInfo('Union Bank', 'asset/images/unionbank.png'),
+    BankInfo('United Bank', 'asset/images/unitedbank.png'),
+    BankInfo('Yes Bank', 'asset/images/yes bank.png'),
+
+    // Add more bank names and logos as needed
+  ];
+
+ 
