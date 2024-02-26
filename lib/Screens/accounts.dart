@@ -1,10 +1,11 @@
 import 'package:amc_2023/Screens/addaccount.dart';
+import 'package:amc_2023/providers/card_widgets_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:enefty_icons/enefty_icons.dart';
+import 'package:provider/provider.dart';
 
 class accounts extends StatefulWidget {
-  final List<Widget> cardWidgets;
-  const accounts({Key? key, required this.cardWidgets}) : super(key: key);
+  const accounts({Key? key}) : super(key: key);
 
   @override
   State<accounts> createState() => _accountsState();
@@ -19,6 +20,7 @@ class _accountsState extends State<accounts> {
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> cardWidgets = Provider.of<CardWidgetsProvider>(context).cardWidgets;
     return Scaffold(
       appBar: AppBar(
         title: Text("My accounts"),
@@ -36,9 +38,8 @@ class _accountsState extends State<accounts> {
             child: ListWheelScrollView(
               itemExtent: 250,
               diameterRatio: 2,
-              children: List.generate(widget.cardWidgets.length, (index) {
-                return widget.cardWidgets[index];
-                setState(() {});
+              children: List.generate(cardWidgets.length, (index) {
+                return cardWidgets[index];
               }),
             ),
           ),

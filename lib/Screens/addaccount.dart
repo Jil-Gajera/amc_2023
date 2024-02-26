@@ -1,8 +1,10 @@
 import 'package:amc_2023/Screens/accounts.dart';
+import 'package:amc_2023/providers/card_widgets_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
+import 'package:provider/provider.dart';
 
 class BankInfo {
   final String name;
@@ -220,7 +222,10 @@ class _addaccountState extends State<addaccount> {
                             backgroundColor: Colors.blueAccent),
                         onPressed: () {
                           if (_selectedBank != null) {
-                            cardWidgets.add(Padding(
+                            Provider.of<CardWidgetsProvider>(context,
+                                    listen: false)
+                                .addToCardWidgets(
+                                  Padding(
                               padding: const EdgeInsets.only(
                                 left: 15.0,
                                 right: 15,
@@ -401,13 +406,9 @@ class _addaccountState extends State<addaccount> {
                                 ),
                               ),
                             ));
+                            
 
-                            Navigator.pushReplacement(context,
-                                MaterialPageRoute(
-                              builder: (context) {
-                                return accounts(cardWidgets: cardWidgets);
-                              },
-                            ));
+                            Navigator.pop(context);
                           }
                         },
                         child: const Center(

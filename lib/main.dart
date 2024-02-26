@@ -5,9 +5,11 @@ import 'package:amc_2023/homePage.dart';
 import 'package:amc_2023/login/login.dart';
 import 'package:amc_2023/login/startupScreen.dart';
 import 'package:amc_2023/login/welcomeScreen.dart';
+import 'package:amc_2023/providers/card_widgets_provider.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/Material.dart';
+import 'package:provider/provider.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -25,19 +27,22 @@ class Myapp extends StatefulWidget {
 class _MyappState extends State<Myapp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: StartupScreen(),
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          textTheme: const TextTheme(
-              bodyLarge: TextStyle(
-                  color: Colors.black, fontSize: 18, fontFamily: "Schyler"),
-              displayLarge: TextStyle(
-                  fontSize: 40,
-                  fontWeight: FontWeight.w700,
-                  color: Colors.black,
-                  fontFamily: "Schyler")),
-          primarySwatch: Colors.blue),
+    return ChangeNotifierProvider(
+      create: (context) => CardWidgetsProvider(),
+      child: MaterialApp(
+        home: HomePage(fname: '',),
+        debugShowCheckedModeBanner: false,
+        theme: ThemeData(
+            textTheme: const TextTheme(
+                bodyLarge: TextStyle(
+                    color: Colors.black, fontSize: 18, fontFamily: "Schyler"),
+                displayLarge: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.black,
+                    fontFamily: "Schyler")),
+            primarySwatch: Colors.blue),
+      ),
     );
   }
 }
